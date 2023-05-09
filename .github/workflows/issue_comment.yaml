@@ -13,7 +13,7 @@ jobs:
         shell: bash
       - name: Create comment with github api
         run: |
-          gh api -X -POST \
+          gh api -X POST \
             http://api.github.com/repo/{ORGANIZATION}/{REPOSITORY}/issues/{ISSUE_NUMBER}/comments
             -f body='
             Comment from the github api
