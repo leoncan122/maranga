@@ -13,11 +13,11 @@ jobs:
         shell: bash
       - name: Create comment with github api
         run: |
-          gh api http://api.github.com/repo/{ORGANIZATION}/{REPOSITORY}/issues/{ISSUE_NUMBER}/comments -f body='
+          gh api http://api.github.com/repo/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments -f body='
             Comment from the github api
             '
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ORGANIZATION: ${{ github.event.user.login }}
+          ORGANIZATION: ${{ github.event.issue.user.login }}
           REPOSITORY: ${{ github.event.repository.name }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
