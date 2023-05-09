@@ -12,12 +12,7 @@ jobs:
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
       - name: Create comment with github api
-        run: |
-          gh api -X POST \
-            https://api.github.com/repo/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments \
-            -f body='
-            Comment from the github api
-            '
+        run: gh api repos/${ORGANIZATION}/${REPOSITORY}/issues/${ISSUE_NUMBER}/comments -f body='Hi from CLI'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ORGANIZATION: ${{ github.event.issue.user.login }}
