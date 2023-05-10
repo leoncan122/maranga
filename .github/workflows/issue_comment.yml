@@ -12,7 +12,7 @@ jobs:
     name: Assign to One Project
     steps:
     - name: Assign NEW issues to Kanban
-      uses: srggrs/assign-one-project-github-action@1.2.0
+      uses: srggrs/assign-one-project-github-action@1.2.1
       if: github.event.action == 'opened'
       with:
         project: 'https://github.com/users/leoncan122/projects/2'
