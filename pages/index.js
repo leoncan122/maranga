@@ -16,8 +16,8 @@ export default function Home() {
         <p className="description">
           Get started by editing <code>pages/index.js</code>
         </p>
-        <Link href="/api/auth/dashboard">Login</Link>
-        <Link href="/api/auth/dashboard">Logout</Link>
+        <Link href="/api/auth/login">Login</Link>
+        <Link href="/api/auth/logout">Logout</Link>
 
       </main>
 
