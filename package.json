@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^2.5.0",
+    "@leoncan122/react-form-lib": "^0.4.5",
     "cypress": "^10.0.3",
     "next": "^12.1.5",
     "react": "^18.0.0",
